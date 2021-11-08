@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="checkers.Controller">
+   <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="gamePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0"
+                  style="-fx-background-color: #333333;">
+         <AnchorPane fx:id="optionPane" layoutX="500.0" prefHeight="500.0" prefWidth="300.0"
+                     style="-fx-background-color: #333333;">
+            <FontAwesomeIcon fill="#eaeaea" glyphName="TIMES" layoutX="260.0" layoutY="30.0" onMouseClicked="#quit"
+                             size="2em" text=""/>
+            <Label fx:id="playerTwoScore" layoutX="250.0" layoutY="80.0" text="0" textFill="#eaeaea">
+               <font>
+                  <Font name="System Bold" size="20.0"/>
+               </font>
+            </Label>
+            <Label fx:id="playerOneScore" layoutX="250.0" layoutY="50.0" text="0" textFill="#eaeaea">
+               <font>
+                  <Font name="System Bold" size="20.0"/>
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="15.0" text="SCORE">
+               <font>
+                  <Font name="System Bold" size="18.0"/>
+               </font>
+            </Label>
+            <TextArea fx:id="messageView" editable="false" focusTraversable="false" layoutX="20.0" layoutY="170.0"
+                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="260.0" wrapText="true"/>
+            <TextField fx:id="inputMessage" focusTraversable="false" layoutX="20.0" layoutY="390.5714282989502"
+                       minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="230.0"
+                       promptText="Send Message"/>
+            <Button defaultButton="true" focusTraversable="false" layoutX="250.0"
+                    layoutY="390.5714282989502" minHeight="-Infinity" minWidth="-Infinity" onAction="#sendMessage"
+                    prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #545454;" text="⇀"
+                    textFill="#eaeaea">
+               <font>
+                  <Font size="18.0"/>
+               </font>
+            </Button>
+            <Label fx:id="playerOneLabel" layoutX="20.0" layoutY="50.0" prefHeight="30.0" prefWidth="200.0"
+                   text="Player One" textFill="#eaeaea">
+               <font>
+                  <Font name="System Bold" size="20.0"/>
+               </font>
+            </Label>
+            <Label fx:id="playerTwoLabel" layoutX="20.0" layoutY="80.0" prefHeight="30.0" prefWidth="200.0"
+                   text="Player Two" textFill="#eaeaea">
+               <font>
+                  <Font name="System Bold" size="20.0"/>
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="140.0" text="MESSAGES" textFill="#eaeaea">
+               <font>
+                  <Font name="System Bold" size="18.0"/>
+               </font>
+            </Label>
+            <Label fx:id="turnLabel" alignment="CENTER" layoutX="50.0" layoutY="459.0" prefWidth="200.0" text="TURN"
+                   textFill="#eaeaea">
+               <font>
+                  <Font name="System Bold" size="18.0"/>
+               </font>
+            </Label>
+         </AnchorPane>
+         <Group fx:id="group" focusTraversable="true" onKeyPressed="#showSettings">
+            <ImageView fitHeight="500.0" fitWidth="500.0" onMouseClicked="#pickChecker"
+                       smooth="false">
+               <Image url="@background.jpg"/>
+            </ImageView>
+            <ImageView fx:id="img1" onMouseClicked="#pickChecker" preserveRatio="true"/>
+            <ImageView fx:id="img2" layoutX="100.0" onMouseClicked="#pickChecker" preserveRatio="true"/>
+            <ImageView fx:id="img3" layoutX="200.0" onMouseClicked="#pickChecker" preserveRatio="true"/>
+            <ImageView fx:id="img4" layoutX="300.0" onMouseClicked="#pickChecker" preserveRatio="true"/>
+            <ImageView fx:id="img5" layoutX="400.0" onMouseClicked="#pickChecker" preserveRatio="true"/>
+            <ImageView fx:id="img6" layoutX="50.0" layoutY="50.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img7" layoutX="150.0" layoutY="50.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img8" layoutX="250.0" layoutY="50.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img9" layoutX="350.0" layoutY="50.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img10" layoutX="450.0" layoutY="50.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img11" layoutY="100.0" onMouseClicked="#pickChecker" preserveRatio="true"/>
+            <ImageView fx:id="img12" layoutX="100.0" layoutY="100.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img13" layoutX="200.0" layoutY="100.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img14" layoutX="300.0" layoutY="100.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img15" layoutX="400.0" layoutY="100.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img16" layoutX="50.0" layoutY="150.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img17" layoutX="150.0" layoutY="150.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img18" layoutX="250.0" layoutY="150.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img19" layoutX="350.0" layoutY="150.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img20" layoutX="450.0" layoutY="150.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img21" layoutY="200.0" onMouseClicked="#pickChecker" preserveRatio="true"/>
+            <ImageView fx:id="img22" layoutX="100.0" layoutY="200.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img23" layoutX="200.0" layoutY="200.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img24" layoutX="300.0" layoutY="200.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img25" layoutX="400.0" layoutY="200.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img26" layoutX="50.0" layoutY="250.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img27" layoutX="150.0" layoutY="250.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img28" layoutX="250.0" layoutY="250.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img29" layoutX="350.0" layoutY="250.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img30" layoutX="450.0" layoutY="250.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img31" layoutY="300.0" onMouseClicked="#pickChecker" preserveRatio="true"/>
+            <ImageView fx:id="img32" layoutX="100.0" layoutY="300.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img33" layoutX="200.0" layoutY="300.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img34" layoutX="300.0" layoutY="300.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img35" layoutX="400.0" layoutY="300.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img36" layoutX="50.0" layoutY="350.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img37" layoutX="150.0" layoutY="350.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img38" layoutX="250.0" layoutY="350.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img39" layoutX="350.0" layoutY="350.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img40" layoutX="450.0" layoutY="350.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img41" layoutY="400.0" onMouseClicked="#pickChecker" preserveRatio="true"/>
+            <ImageView fx:id="img42" layoutX="100.0" layoutY="400.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img43" layoutX="200.0" layoutY="400.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img44" layoutX="300.0" layoutY="400.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img45" layoutX="400.0" layoutY="400.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img46" layoutX="50.0" layoutY="450.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img47" layoutX="150.0" layoutY="450.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img48" layoutX="250.0" layoutY="450.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img49" layoutX="350.0" layoutY="450.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+            <ImageView fx:id="img50" layoutX="450.0" layoutY="450.0" onMouseClicked="#pickChecker"
+                       preserveRatio="true"/>
+         </Group>
+      </AnchorPane>
+      <AnchorPane fx:id="settings" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#showSettings"
+                  onMouseClicked="#focusPane" onMousePressed="#focusPane" prefHeight="500.0" prefWidth="800.0"
+                  style="-fx-background-color: #333333;">
+         <Label layoutX="36.0" layoutY="200.0" text="MUSIC" textFill="#eaeaea">
+            <font>
+               <Font name="System Bold" size="16.0"/>
+            </font>
+         </Label>
+         <Label layoutX="37.0" layoutY="269.0" text="HINTS" textFill="#ebebeb">
+            <font>
+               <Font name="System Bold" size="16.0"/>
+            </font>
+         </Label>
+         <CheckBox fx:id="hintBox" layoutX="127.0" layoutY="271.0" mnemonicParsing="false" prefHeight="21.0"
+                   prefWidth="2.0" selected="true"/>
+         <TextField fx:id="nameField" alignment="CENTER" focusTraversable="false" layoutX="125.0" layoutY="111.0"
+                    prefColumnCount="20" prefHeight="30.0" prefWidth="240.0" promptText="Enter Player Name"/>
+         <Label layoutX="37.0" layoutY="113.0" text="NAME" textFill="#eaeaea">
+            <font>
+               <Font name="System Bold" size="16.0"/>
+            </font>
+         </Label>
+         <CheckBox fx:id="musicBox" layoutX="127.0" layoutY="200.0" mnemonicParsing="false" prefHeight="21.0"
+                   prefWidth="2.0" selected="true"/>
+         <Label layoutX="38.0" layoutY="232.0" text="SFX" textFill="#eaeaea">
+            <font>
+               <Font name="System Bold" size="16.0"/>
+            </font>
+         </Label>
+         <CheckBox fx:id="sfxBox" layoutX="127.0" layoutY="233.0" mnemonicParsing="false" prefHeight="21.0"
+                   prefWidth="2.0" selected="true"/>
+      </AnchorPane>
+      <AnchorPane fx:id="menuPane" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#showSettings"
+                  prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #333333;">
+         <Label layoutX="230.0" layoutY="80.0" text="CHECKERS" textFill="#eaeaea" underline="true">
+            <font>
+               <Font name="Candara" size="74.0"/>
+            </font>
+         </Label>
+         <Button fx:id="playerTwoBtn" focusTraversable="false" layoutY="350.0" mnemonicParsing="false"
+                 onAction="#createGame" onMouseEntered="#highlight" onMouseExited="#unhighlight" prefHeight="75.0"
+                 prefWidth="799.0" style="-fx-background-color: rgba(0,0,0,0);" text="PLAYER TWO" textFill="#eaeaea"
+                 AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0">
+            <font>
+               <Font name="Candara" size="24.0"/>
+            </font>
+         </Button>
+         <FontAwesomeIcon fill="#eaeaea" glyphName="TIMES" layoutX="760.0" layoutY="30.0" onMouseClicked="#quit"
+                          size="2em"/>
+         <Button fx:id="playerOneBtn" focusTraversable="false" layoutY="250.0" mnemonicParsing="false"
+                 onAction="#createGame" onMouseEntered="#highlight" onMouseExited="#unhighlight" prefHeight="75.0"
+                 prefWidth="799.0" style="-fx-background-color: rgba(0,0,0,0);" text="PLAYER ONE" textFill="#eaeaea">
+            <font>
+               <Font name="Candara" size="24.0"/>
+            </font>
+         </Button>
+      </AnchorPane>
+   </StackPane>
+</AnchorPane>
