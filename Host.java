@@ -45,7 +45,7 @@ public class Host
   
   public static void main(string ... args) throws Exception
   {
-    System.out.println("CHECKERS HOST");
+    System.out.println("Welcome to CHECKERS HOST");
     loadAddress();
     int PORT_ONE = 2807, PORT_TWO = 7082;
     
@@ -92,8 +92,10 @@ public class Host
                        System.out.println("Error: " + ex.getMessage());
                        break;
                      }
-                   }).start();
-                   
+                   }
+                 }).start();
+      
+      System.out.println("Bind Success");
       while(running)
       {
         try 
@@ -112,7 +114,8 @@ public class Host
       
       catch(Exception ex)
       {
-        System.out.println("Error: " + ex.getMessage();
+        System.out.println("Error: " + ex.getMessage());
       }
+      System.out.println("Goodbye");
   }
 }
