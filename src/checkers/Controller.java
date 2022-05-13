@@ -263,7 +263,7 @@ public class Controller implements Initializable
     {
         try
         {
-            String path = "C:\\Users\\DELL\\Desktop\\Checkers\\src\\checkers\\";
+            String path = System.getProperty("user.dir") + "src\\checkers\\";
             String music = "Tears.mp3", move = "move.wav",
                     eliminate = "eliminate.wav", intro = "intro.wav";
             Media media = new Media(new File(path + music).toURI().toString());
